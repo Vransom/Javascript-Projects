@@ -4,7 +4,7 @@ var Y=5; //increment
 Y++;
 document.write(Y);
 
-document.write("\n");
+document.write("<br>");
 
 var Z=8; //decrement
 Z--;
