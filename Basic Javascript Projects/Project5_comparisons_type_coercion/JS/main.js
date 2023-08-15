@@ -2,6 +2,10 @@ function not_function() {
     document.getElementById("not").innerHTML=!(20>10);
 }
 
+document.write(typeof "frog");
+
+document.write("<br>");
+
 document.write("10"+5); //coercion, combining a string and an umber
 
 document.write("<br>"); //line break
