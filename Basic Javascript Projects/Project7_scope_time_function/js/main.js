@@ -50,7 +50,7 @@ function age_function() {  //else statement
     document.getElementById("how_old_are_you?").innerHTML=drive;
 }
 
-function time_function() {
+function time_function() { //time function
     var Time= new Date().getHours();
     var Reply;
     if (Time<12==Time>0) {
