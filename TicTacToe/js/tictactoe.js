@@ -19,7 +19,7 @@ function placeXOrO(squareNumber) {
             select.style.backgroundImage='url("images/newo.png")';
         }
         //squareNumber and activePlayer are concatenated together and added to array
-        selectedSquares.push(squareNumber+activePlayer);
+        selectedSquares.push(squareNumber + activePlayer);
         //this calls a function to check for any qin conditions
         checkWinConditions();
         //this condition is for changing the active player
@@ -35,11 +35,11 @@ function placeXOrO(squareNumber) {
         //this function plays placement sound
         audio('./media/newplace.mp3');
         //this condition checks to see if if is the computers turn
-        if (activePlayer ==="0") {
+        if (activePlayer ==="O") {
             //this function disables clicking for computers turn
             disableClick();
             //this function waits 1 second before the computer places an images and enables click
-            setTimeout(function() {computersTurn(); }, 1000);
+            setTimeout(function () {computersTurn(); }, 1000);
             }
             //returning true is needed for our computersTurn() function to work
             return true;
@@ -47,13 +47,13 @@ function placeXOrO(squareNumber) {
         //this function results in a random square being selected by the computer
         function computersTurn() {
             //this boolean is needed for our while loop
-            let success=false;
+            let success= false;
             //this variable stores a random number 0-8
             let pickASquare;
             //this condition allows our while loop to keep trying if a square is selected already
-            while(!success) {
+            while (!success) {
                 //a random number between 0 and 8 is selected
-                pickASquare=String(Math.floor(Math.random()*9));
+                pickASquare= String(Math.floor(Math.random() * 9));
                 //if the random number evaluated returns true, the square hasnt been selected yet
                 if (placeXOrO(pickASquare)) {
                     //this line calls the function
@@ -85,7 +85,7 @@ function checkWinConditions() {
     //X 0,4,8 condition.
     else if (arrayIncludes('0X', '4X', '8X')) {drawWinLine(100, 100, 520, 520)}
     //O 3, 4, 5 condition.
-    else if (arrayIncludes('0O', '4O', '5O')) {drawWinLine(50, 100, 558, 100)}
+    else if (arrayIncludes('0O', '1O', '2O')) {drawWinLine(50, 100, 558, 100)}
     //O 3, 4, 5 condition.
     else if (arrayIncludes('3O', '4O', '5O')) {drawWinLine(50, 304, 558, 304)}
     //O 6, 7, 8 condition.
