@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    font-family: "Arial";
+    color: blue;
+}
+
+form {
+    text-align:center;
+    font-family: "Arial";
+}
+
+.input {
+    width:75%;
+    background-color: rgb(157, 157, 216);
+    color: white;
+    padding-top:12px;
+    font-size: large;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.submit {
+    width: 10%;
+    font-size:large;
+    padding-top:3px;
+    padding-bottom:3px;
+    margin-top:10px;
+}
